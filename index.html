@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription aux Formations</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Centre de Formation Professionnelle</h1>
+      <button class="toggle-mode" id="toggle-mode">Mode Sombre</button>
+    </header>
+    <main>
+      <section id="courses-info">
+        <h2 class="header-2">Nos Formations</h2>
+        <div id="courses-list"></div>
+      </section>
+      <section id="registration-form">
+        <h2 class="header-2">Formulaire d'Inscription</h2>
+        <form id="student-form">
+          <div class="form-group">
+            <label for="firstName">Prénom:</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+              value="youssef"
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Nom:</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              required
+              value="ketata"
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">Adresse:</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              required
+              value="address reout x"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Numéro de téléphone:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              value="1345213"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              value="youssef@gmail.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="level">Niveau:</label>
+            <select id="level" name="level" required>
+              <option value="">Choisissez votre niveau</option>
+              <option value="debutant">Débutant</option>
+              <option value="intermediaire">Intermédiaire</option>
+              <option value="avance">Avancé</option>
+            </select>
+          </div>
+          <div id="course-selection">
+            <h3>Sélection des Formations (2-3)</h3>
+            <div id="selected-courses"></div>
+            <button type="button" id="add-course">
+              <!-- add svg -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 1a6 6 0 1 1 0 12A6 6 0 0 1 8 2z"/>
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+              Ajouter une formation
+            </button>
+            <button type="button" class="auto-pick-dates" id="auto-pick-dates">
+              <!-- add svg -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-1h12V3a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v1z"/>
+              </svg>
+              Choisir les dates automatiquement
+            </button>
+          </div>
+          <button type="submit" class="valider">Valider</button>
+        </form>
+      </section>
+      <section id="summary" style="display: none">
+        <h2 class="header-2">Récapitulatif de la Demande</h2>
+        <div id="summary-content"></div>
+        <button id="print-summary">Imprimer le récapitulatif</button>
+        <button id="generate-pdf">Générer un PDF</button>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+Fonctionnalité:
+- Inscription aux formations : Formulaire pour s'inscrire aux formations.
+- Sélection des formations : Choisir 2 à 3 formations parmi les options disponibles.
+- Choix automatique des dates : Sélection automatique des dates de début des formations.
+- Mode sombre : Basculer entre le mode clair et le mode sombre.
+- Récapitulatif : Afficher un récapitulatif des informations et des formations sélectionnées.
+- Impression et PDF : Imprimer ou générer un PDF du récapitulatif.
